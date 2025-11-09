@@ -1,8 +1,11 @@
+import Header from "../../Components/Header/Header"
 
 
 function Hero() {
-  return (
-    <div>Hero</div>
+  return ( 
+    <div>
+      <Header/>
+    </div>
   )
 }
 
