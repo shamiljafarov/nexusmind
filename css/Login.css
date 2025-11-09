@@ -1,7 +1,6 @@
 * {
   color: rgb(194, 194, 194);
 }
- 
 
 input {
   outline: none;
@@ -35,11 +34,10 @@ label {
   display: flex;
   gap: 15px;
   align-items: center;
-
-  input {
-    width: 18px;
-    height: 18px;
-  }
+}
+.checkboxDiv input {
+  width: 18px;
+  height: 18px;
 }
 
 .actions {
@@ -49,7 +47,7 @@ label {
 }
 
 #sendBtn {
-    width: 100%;
+  width: 100%;
   background-color: #113362;
   color: white;
   padding: 12px 20px;
@@ -58,10 +56,9 @@ label {
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s;
-
-  &:hover {
-    background-color: #0078d4;
-  }
+}
+#sendBtn:hover {
+  background-color: #0078d4;
 }
 
 @media (max-width: 536px) {
@@ -78,4 +75,4 @@ label {
     font-size: 16px;
     padding: 8px 12px;
   }
-}
+}/*# sourceMappingURL=Login.css.map */
