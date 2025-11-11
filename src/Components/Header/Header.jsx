@@ -1,6 +1,6 @@
-import './_Header.scss'
-import Container from '../Container/Container' 
-import { useState } from "react";  
+import "./_Header.scss";
+import Container from "../Container/Container";
+import { useState } from "react";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,11 +9,12 @@ function Header() {
     <header>
       <Container>
         <div className="header__wrapper">
-          <a href="#">
-            <img className="header__logo" src="src/assets/images/logo.png" alt="logo" />
+          {/* Logo */}
+          <a href="#" className="header__logo">
+            <img src="src/assets/images/logo.png" alt="Nexusmind Logo" />
           </a>
 
-          {/* Бургер кнопка */}
+          {/* Burger button */}
           <div
             className={`burger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -23,20 +24,21 @@ function Header() {
             <span></span>
           </div>
 
-          {/* Навигация */}
+          {/* Navigation */}
           <nav className={menuOpen ? "active" : ""}>
             <ul>
               <li><a href="#home">Ana səhifə</a></li>
               <li><a href="#about">Haqqımızda</a></li>
               <li><a href="#psychologists">Psixoloqlar</a></li>
               <li><a href="#services">Xidmətlər</a></li>
-              <li><a href="#contact">Əlaqə</a></li>
+              <li><a href="#faq">Əlaqə</a></li>
             </ul>
           </nav>
 
-          <div className="header__login">
-            <button className="header__signUp__btn">Sign Up</button>
-            <button className="header__login__btn">Login</button>
+          {/* Right side button */}
+          <div className="hero__buttons">
+            <button className="btn primary">Qeydiyyatdan keç</button>
+            <button className="btn secondary">Daxil ol</button>
           </div>
         </div>
       </Container>
@@ -44,4 +46,4 @@ function Header() {
   );
 }
 
-export default Header; 
+export default Header;
