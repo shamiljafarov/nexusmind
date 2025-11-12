@@ -1,11 +1,13 @@
 import './Partners-section.scss'
 import sehiyyelogo from '../../assets/images/Logo_of_the_Ministry_of_Healthcare_of_Azerbaijan.png'
 import tebiblogo from '../../assets/images/TƏBİB_logo_PNG.png'
+import Container from '../Container/Container'
 
 function Partners() {
     return(
         <section>
-            <div className="header">
+            <Container>
+                <div className="header">
                 <p className='first'>Partnyorlarımızı</p>
                 <p>tanıyın</p>
             </div>
@@ -31,6 +33,7 @@ function Partners() {
 
                 </div>
             </div>
+            </Container>
         </section>
     )
 }

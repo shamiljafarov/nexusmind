@@ -1,9 +1,11 @@
 import React from "react";
 import "./Hero.scss";
+import Container from "../Container/Container";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <Container>
+      <div className="hero">
       <div className="hero__content">
         <h1>
           Yenilikçi psixoloji dəstək   <br />platforması ilə balanslı həyat
@@ -18,6 +20,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 
