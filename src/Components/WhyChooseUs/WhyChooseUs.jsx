@@ -37,11 +37,7 @@ function WhyChooseUs() {
                         <p>seçməlisiniz?</p>
                 </div>
 
-            <Container>
-                <div className="header">
-                        <p className="first">Niyə bizi</p>
-                        <p>seçməlisiniz?</p>
-                    </div>
+            <Container> 
                 <div className="why-choose-us-wrapper">
                     
 

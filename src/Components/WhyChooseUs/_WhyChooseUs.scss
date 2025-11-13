@@ -5,11 +5,17 @@
     p {
         font-size: 40px;
         font-weight: 500;
-        
+
     }
+
     .first {
         color: #1e88ff;
     }
+}
+
+.why-choose-us {
+    position: relative; 
+    height: 700px;
 }
 
 .why-choose-us-wrapper {
@@ -34,8 +40,9 @@
     p {
         font-size: 40px;
         font-weight: 500;
-        
+
     }
+
     .first {
         color: #1e88ff;
     }
@@ -73,13 +80,21 @@
     background: linear-gradient(140deg, #b8b8f9, #00d5ff00, #7d9fe8);
     background-size: 300% 300%;
     animation: flowingGradient 8s ease infinite;
-} 
+}
 
 @keyframes flowingGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-} 
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /* Появление */
 .choose-card.show {
@@ -94,7 +109,7 @@
         0 25px 55px rgba(0, 0, 0, 0.18),
         inset 0 0 20px rgba(255, 255, 255, 0.6);
     background: linear-gradient(90deg, #c6c6ff, #f2f7f9, #a2b9eb);
-    
+
 }
 
 /* Микроанимация движения мыши (интересно, но не перебор) */
@@ -150,6 +165,10 @@
 ------------------------------ */
 
 @media (max-width: 999px) {
+.why-choose-us {
+        position: relative;
+        height: 1000px;
+    }
     .choose-card {
         position: relative;
         width: 90%;
@@ -167,6 +186,11 @@
 ------------------------------ */
 
 @media (max-width: 600px) {
+    .why-choose-us {
+        position: relative;
+        height: 1000px;
+    }
+
     .choose-card {
         width: 95%;
         padding: 28px;
