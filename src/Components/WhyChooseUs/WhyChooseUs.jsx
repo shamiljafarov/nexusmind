@@ -20,7 +20,12 @@ function WhyChooseUs() {
     return (
         <section className="why-choose-us">
             <Container>
+                <div className="header">
+                        <p className="first">Niyə bizi</p>
+                        <p>seçməlisiniz?</p>
+                    </div>
                 <div className="why-choose-us-wrapper">
+                    
 
                     <div className="choose-card">
                         <span className="icon">🧠</span>
