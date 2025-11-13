@@ -3,9 +3,8 @@ import './_HowItWorks.scss'
 
 function HowWorks() {
     return (
-        <section className="how_work_sect">
-            <p className="how_works_p">Necə İşləyir</p>
-            <h2 className="how_works_h2">Sağlamlığa Doğru Yolunuz 3 Sadə Addımda</h2>
+        <section className="how_work_sect"> 
+            <h2 className="how_works_h2"><span>Sağlamlığa Doğru Yolunuz</span> 3 Sadə Addımda</h2>
             <Container>
                 <div className="how_work_sect_wrapper">
                     <div className="card">

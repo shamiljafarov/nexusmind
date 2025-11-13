@@ -1,22 +1,19 @@
 .how_work_sect {
     padding: 80px 0;
     text-align: center;
-    background: #f7f9fc;
-
-    .how_works_p {
-        color: #4a6cf7;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
+    background: #f7f9fc; 
 
     .how_works_h2 {
         font-size: 32px;
         font-weight: 700;
         color: #1c1c1c;
-        margin-bottom: 50px;
+        max-width: 400px; 
+        text-align: center;
+        margin: 50px auto;
+
+        span {
+             color: #1e88ff;
+        }
     }
 
     .how_work_sect_wrapper {
