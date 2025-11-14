@@ -1,31 +1,61 @@
 import React, { useState } from "react";
-import "./Login.scss"
+import "./Login.scss";
 
-const Login = () => {
+function Login() {
   const [form, setForm] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setForm({ ...form, [name]: type === "checkbox" ? checked : value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.agree) {
-      alert("Пожалуйста, согласитесь с условиями обработки данных.");
-      return;
-    }
-    console.log("Отправлено:", form);
+    console.log("Form göndərildi:", form);
   };
 
   return (
     <div className="container">
-    
-    </div>
-  );
-};
+      <div className="login">
+        <div className="login__container">
+          <h1>Daxil ol</h1>
+          <hr />
 
+          <form onSubmit={handleSubmit} className="login__form">
+            <label>
+              Email*
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label>
+              Şifrə*
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <button type="submit" id="sendBtn">
+              Daxil ol
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    )
+}
 export default Login;
