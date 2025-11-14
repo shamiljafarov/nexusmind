@@ -23,37 +23,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <h1>Daxil Ol</h1>
-      <hr />
-
-      <form onSubmit={handleSubmit}>
-        <div className="inputs">
-            <label>
-                Email*
-                <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                />
-            </label>
-            <label>
-                Password*
-                <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={form.password}
-                onChange={handleChange}/>
-            </label>
-        </div>
-        <div className="actions">
-          <button type="submit" id="sendBtn">
-            Daxil Ol
-          </button>
-        </div>
-      </form>
+    
     </div>
   );
 };
