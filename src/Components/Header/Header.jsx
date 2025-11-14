@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header>
-      <Container>
+      <Container> 
         <div className="header__wrapper">
           {/* Logo */}
           <a href="#" className="header__logo">
@@ -32,6 +32,7 @@ function Header() {
               <li><a href="#psychologists">Psixoloqlar</a></li>
               <li><a href="#services">Xidmətlər</a></li>
               <li><a href="#faq">Əlaqə</a></li>
+              <li><a href="#login">Daxil ol</a></li>
             </ul>
           </nav>
 

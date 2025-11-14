@@ -25,10 +25,10 @@ header {
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    transition: 0.3s; 
+    transition: 0.3s;
 
     &:hover {
-        filter: drop-shadow(0 0 5px rgb(76, 222, 255));
+      filter: drop-shadow(0 0 5px rgb(76, 222, 255));
     }
 
     img {
@@ -64,45 +64,49 @@ header {
           color: #1e88ff;
         }
       }
+
+      &>:last-child {
+        display: none;
+      }
     }
   }
 
-  
-    .hero__buttons {
-      display: flex;
-      gap: 1rem;
 
-      .btn {
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 10px;
-        padding: 0.9rem 1.8rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: none;
+  .hero__buttons {
+    display: flex;
+    gap: 1rem;
 
-        &.primary {
+    .btn {
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 0.9rem 1.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+
+      &.primary {
+        background-color: #1e88ff;
+        color: #fff;
+
+        &:hover {
+          background-color: #1876e5;
+        }
+      }
+
+      &.secondary {
+        background-color: #fff;
+        color: #0b1525;
+        border: 1px solid #1e88ff;
+
+        &:hover {
           background-color: #1e88ff;
           color: #fff;
-
-          &:hover {
-            background-color: #1876e5;
-          }
-        }
-
-        &.secondary {
-          background-color: #fff;
-          color: #0b1525;
-          border: 1px solid #1e88ff;
-
-          &:hover {
-            background-color: #1e88ff;
-            color: #fff;
-          }
         }
       }
     }
-  
+  }
+
 
   /* === BURGER MENU === */
   .burger {
@@ -126,9 +130,11 @@ header {
     &.open span:nth-child(1) {
       transform: translateY(7.5px) rotate(45deg);
     }
+
     &.open span:nth-child(2) {
       opacity: 0;
     }
+
     &.open span:nth-child(3) {
       transform: translateY(-7.5px) rotate(-45deg);
     }
@@ -170,10 +176,14 @@ header {
           color: #0b1525;
           font-weight: 500;
         }
+
+        &>:last-child {
+          display: block;
+        }
       }
     }
 
-    .header__actions {
+    .hero__buttons {
       display: none;
     }
   }
