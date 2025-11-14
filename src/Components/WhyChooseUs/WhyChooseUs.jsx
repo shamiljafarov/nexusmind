@@ -4,6 +4,7 @@ import "./_WhyChooseUs.scss";
 import AI from '../../assets/images/AI.jpg'
 import Meditation from '../../assets/images/meditation.png'
 import VR from '../../assets/images/vr.jpg'
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 function WhyChooseUs() {
     useEffect(() => {
@@ -36,6 +37,7 @@ function WhyChooseUs() {
                         <p className="first">Niyə bizi</p>
                         <p>seçməlisiniz?</p>
                 </div>
+                <SectionHeader subtitle='Niyə bizi'  title='seçməlisiniz?'/>
 
             <Container> 
                 <div className="why-choose-us-wrapper">

@@ -8,9 +8,9 @@ function Partners() {
         <section>
             <Container>
                 <div className="header">
-                <p className='first'>Partnyorlarımızı</p>
-                <p>tanıyın</p>
-            </div>
+                    <p className='first'>Partnyorlarımızı</p>
+                    <p>tanıyın</p>
+                </div>
             <div className='partners-logo'>
                 <div className='slider'>
                     <img src={sehiyyelogo} alt='sehiyye-nazirliyi-logo' className='sehiyye-logo'/>
