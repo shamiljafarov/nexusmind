@@ -1,3 +1,4 @@
+import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Hero from '../../Components/Hero/Hero';
 import HowWorks from '../../Components/HowItWorks/HowItWorks';
@@ -14,6 +15,7 @@ function MainPage() {
             <HowWorks />
             <WhyChooseUs/>
             <Psychologists/>
+            <Footer/>
         </section>
     )
 }

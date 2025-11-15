@@ -15,18 +15,18 @@ const psychologistList =[
     },
      {
         image: psychologist2,
-        name: 'Dr. Emily Carter',
-        speciality: 'Anxiety & Stress'
+        name: 'Michael Chen',
+        speciality: 'Relationship Issues'
     },
     {
         image: psychologist3,
-        name: 'Dr. Emily Carter',
-        speciality: 'Anxiety & Stress'
+        name: 'Sarah Rodriguez',
+        speciality: 'Depression &amp; Trauma'
     },
     {
         image: psychologist4,
-        name: 'Dr. Emily Carter',
-        speciality: 'Anxiety & Stress'
+        name: 'David Lee',
+        speciality: 'Personal Growth'
     }
 ]
 
