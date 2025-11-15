@@ -1,94 +1,162 @@
- .login {
-   width: 100%;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: linear-gradient(135deg,
-       rgba(2, 0, 36, 1) 0%,
-       rgba(9, 9, 121, 1) 35%,
-       rgba(0, 212, 255, 1) 100%);
-   font-family: Arial, Helvetica, sans-serif;
-   padding: 20px;
-   color: #c2c2c2;
- }
+.login-page {
+  display: flex;
+  height: 95vh;
+  overflow: hidden; // <--- чтобы ничего не вылезало
+  padding-top: 20px;
+  gap: 20px;
 
- .login__container {
-   width: 100%;
-   max-width: 400px;
-   background-color: #03003d;
-   border-radius: 12px;
-   padding: 30px 25px;
-   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
- }
+  .left {
+    flex: 1; 
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; // <--- фиксирует overflow
+    overflow: hidden;
 
- h1 {
-   text-align: center;
-   margin-bottom: 10px;
- }
+    img {
+        transition: .5s;
+        cursor: pointer;
+    }
+    img:hover {
+        filter: drop-shadow(0 0 20px rgb(0, 225, 255));
+    }
 
- hr {
-   border: none;
-   height: 1px;
-   background: rgb(52, 52, 52);
-   margin: 20px 0;
- }
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      color: #1e88e5;
+    }
 
- .login__form {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
- }
+    .title {
+      margin-top: 20px;
+      font-size: 33px;
+      font-weight: 700;
+      color: #0f233c;
+    }
 
- label {
-   display: flex;
-   flex-direction: column;
-   font-size: 15px;
- }
+    .subtitle {
+      margin-top: 12px;
+      color: #4d5b76;
+      font-size: 16px;
+      max-width: 350px;
+    }
 
- input {
-   outline: none;
-   border: 1px solid rgb(52, 52, 52);
-   padding: 12px 15px;
-   background-color: #1d1a52;
-   border-radius: 12px;
-   color: white;
-   margin-top: 6px;
-   font-size: 15px;
- }
+    .image-box {
+      margin-top: auto; // <--- чтобы картинка опускалась вниз
+      width: 100%;
+      max-width: 330px;
+      height: auto;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      overflow: hidden;
+      align-self: center;
 
- #sendBtn {
-   width: 100%;
-   background-color: #113362;
-   color: white;
-   padding: 12px 20px;
-   border: none;
-   border-radius: 12px;
-   font-size: 18px;
-   cursor: pointer;
-   transition: background 0.3s ease;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 
-   &:hover {
-     background-color: #0078d4;
-   }
- }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0; // <--- чтобы карусель помещалась
 
- @media (max-width: 536px) {
-   .login__container {
-     padding: 20px 15px;
-   }
+    .card {
+      width: 420px;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
 
-   h1 {
-     font-size: 22px;
-   }
+      max-height: 90vh;     // <--- ограничили высоту
+      overflow-y: auto;     // <--- скролл ТОЛЬКО внутри карточки
+      scrollbar-width: thin;
+      scrollbar-color: #c5d1e0 transparent;
 
-   input {
-     font-size: 14px;
-     padding: 10px;
-   }
+      .tabs {
+        display: flex;
+        margin-bottom: 20px;
 
-   #sendBtn {
-     font-size: 16px;
-     padding: 10px;
-   }
- }
+        button {
+          flex: 1;
+          padding: 12px 0;
+          border: none;
+          border-radius: 10px;
+          background: #f0f3f8;
+          cursor: pointer;
+          font-weight: 600;
+
+          &.active {
+            background: #1e88e5;
+            color: white;
+          }
+        }
+      }
+
+      .welcome {
+        text-align: center;
+        color: #0f233c;
+        margin-bottom: 6px;
+      }
+
+      .small {
+        text-align: center;
+        color: #6b7b8e;
+        margin-bottom: 20px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 4px;
+          font-size: 14px;
+          color: #3d4b5f;
+        }
+
+        input {
+          padding: 13px;
+          border: 1px solid #d4dce6;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+
+        .login-btn {
+          padding: 13px;
+          background: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          font-weight: 600;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .bottom {
+        text-align: center;
+        margin-top: 15px;
+
+        a {
+          color: #1e88e5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
