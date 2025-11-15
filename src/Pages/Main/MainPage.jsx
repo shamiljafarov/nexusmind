@@ -1,3 +1,4 @@
+import FAQ from '../../Components/FAQ/Faq';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Hero from '../../Components/Hero/Hero';
@@ -16,6 +17,7 @@ function MainPage() {
             <HowWorks />
             <WhyChooseUs/>
             <Psychologists/>
+            <FAQ/>
             <Footer/>
         </section>
     )
