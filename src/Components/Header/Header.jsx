@@ -1,6 +1,7 @@
 import "./_Header.scss";
 import Container from "../Container/Container";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,8 +39,7 @@ function Header() {
 
           {/* Right side button */}
           <div className="hero__buttons">
-            <button className="btn primary">Qeydiyyatdan keç</button>
-            <button className="btn secondary">Daxil ol</button>
+            <Link to="/login" className="btn secondary">Daxil ol</Link>
           </div>
         </div>
       </Container>
