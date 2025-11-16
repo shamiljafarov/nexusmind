@@ -6,3 +6,9 @@
     justify-content: center;
     gap: 40px; 
 }
+
+@media (max-width: 605px) {
+    .psychologists div {
+        width: 100%;
+    }
+}

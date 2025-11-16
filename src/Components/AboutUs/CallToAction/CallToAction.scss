@@ -43,3 +43,18 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .cta__title {
+    font-size: 30px;
+  }
+
+  .cta__text {
+    font-size: 15px;
+  }
+
+  .cta__btn {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+} 

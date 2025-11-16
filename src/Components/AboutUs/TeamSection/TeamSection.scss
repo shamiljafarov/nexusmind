@@ -2,7 +2,6 @@
   text-align: center;
   padding: 80px 20px;
   max-width: 1300px;
-  margin: 0 auto;
 
   &__title {
     font-size: 42px;
@@ -23,7 +22,6 @@
     display: flex;
     justify-content: space-between;
     gap: 25px;
-    flex-wrap: wrap;
   }
 
   &__card {
@@ -72,7 +70,7 @@
   }
 
   &__btn {
-    background: #dce9ff;
+    background: #dce9ff; 
     color: #2464dc;
     border: none;
     padding: 14px 26px;
@@ -83,7 +81,30 @@
     transition: 0.2s ease;
 
     &:hover {
-      background: #c6d9ff;
+      background: #c6d9ff; 
     }
   }
 }
+
+
+@media (max-width: 972px) {
+  .team__cards {
+    flex-direction: column;
+    align-items: center;
+
+    .team__card {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .team__title {
+    font-size: 30px; 
+  } 
+
+  .team__subtitle {
+    font-size: 15px;  
+    max-width: 400px;
+  }
+} 

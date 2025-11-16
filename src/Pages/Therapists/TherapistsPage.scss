@@ -1,8 +1,21 @@
 .therapists-page {
-    margin: 120px auto 4rem;
+  margin: 120px auto 4rem;
   display: flex;
   padding: 30px;
   gap: 30px;
+
+  /* ---- TABLET ---- */
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  /* ---- PHONE ---- */
+  @media (max-width: 576px) {
+    padding: 15px;
+    margin-top: 90px;
+  }
 
   .content {
     flex: 1;
@@ -13,10 +26,19 @@
       h1 {
         font-size: 28px;
         margin-bottom: 6px;
+
+        @media (max-width: 576px) {
+          font-size: 22px;
+        }
       }
 
       p {
         color: #666;
+        font-size: 16px;
+
+        @media (max-width: 576px) {
+          font-size: 14px;
+        }
       }
 
       .search {
@@ -26,6 +48,10 @@
         border-radius: 8px;
         border: 1px solid #dcdcdc;
         font-size: 14px;
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
       }
     }
 
@@ -33,12 +59,23 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+
+      /* ---- TABLET ---- */
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* ---- PHONE ---- */
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .pagination {
       margin-top: 30px;
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
 
       span {
         padding: 6px 10px;

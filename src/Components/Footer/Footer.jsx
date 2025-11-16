@@ -31,7 +31,7 @@ export default function Footer() {
                         <a href='#'>Xidmətlər</a>
                         <a href='#'>Əlaqə</a>
                     </div>
-
+ 
                     <div className='footerColumn'>
                         <h4>Resurslar</h4>
                         <a href='#'>Blog</a>

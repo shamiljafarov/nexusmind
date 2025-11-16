@@ -105,32 +105,26 @@ hr {
 @media (max-width: 900px) {
     .wrapper {
         grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
     }
 }
 
 @media (max-width: 600px) {
     .wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 450px) {
-    .wrapper {
         grid-template-columns: 1fr;
-        text-align: center;
 
-        .footer_logo {
+        .logo-column {
+            display: flex;
+            flex-direction: column;
+             justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        &>div {
             justify-content: center;
+            align-items: center;
         }
-    }
 
-    .privacy {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        .policy {
-            margin-top: 10px;
-        }
     }
-}
+} 

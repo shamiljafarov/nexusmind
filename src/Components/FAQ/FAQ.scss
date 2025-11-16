@@ -13,11 +13,8 @@
 
 .faqSection {
   max-width: 900px;
-  margin: 60px auto;
-  text-align: center;
-  padding: 0 20px;
-
-
+  margin: 60px auto; 
+  padding: 0 20px;  
 }
 
 .faqWrapper {
@@ -83,17 +80,22 @@
 
 
 @media (max-width: 600px) {
-  .faqSection {
-    h2 {
-      font-size: 24px;
-    }
 
-    .subtitle {
-      font-size: 14px;
+  .header {
+    p:first-child {
+      font-size: 30px;
+    }
+    p:last-child {
+      font-size: 30px;
     }
   }
+ 
 
   .faqItem .questionRow p {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  
+  .openAnswer {
+    font-size: 12px !important; 
   }
 }

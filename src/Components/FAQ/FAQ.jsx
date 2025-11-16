@@ -33,7 +33,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="faqSection">
+    <section className="faqSection"> 
       <div className="header">
         <p className="subtitle">Tez-tez verilən</p>
         <p>suallar</p>
@@ -48,7 +48,7 @@ export default function FAQ() {
             </div>
 
             <div className={`answerWrapper ${openIndex === index ? "open" : ""}`}>
-              <p>{item.answer}</p>
+              <p className="openAnswer">{item.answer}</p>
             </div>
 
           </div>

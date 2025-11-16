@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutHero.scss";
+import Brain from '../../../assets/images/brain.gif'
 
 const AboutHero = () => {
   return (
@@ -13,7 +14,10 @@ const AboutHero = () => {
                 Platformamızın arxasındakı ürəyi və şəfqətli, əlçatan psixoloji dəstək göstərməyə olan sədaqətimizi kəşf edin.
             </p>
         </div>
-    </section>
+        <div className="brain_image">
+          <img src={Brain} alt="brain image" width={'400px'} />
+        </div>
+    </section> 
   );
 };
 

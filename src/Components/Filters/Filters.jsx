@@ -16,21 +16,21 @@ export default function Filters({ filters, setFilters }) {
 
   return (
     <div className="filters">
-      <div className="header">
-        <h3>Filter by</h3>
-        <button onClick={clearAll} className="clear">
-          Clear Filters
+      <div className="filters-header">
+        <h3>Filtr</h3>
+        <button onClick={clearAll} className="clear-btn">
+          Filtrləri sil
         </button>
       </div>
 
       <div className="section">
-        <h4>Specialization</h4>
+        <h4>İxtisas</h4>
         {[
-          "Anxiety",
-          "Depression",
-          "Trauma",
-          "Relationship Issues",
-          "Grief and Loss",
+          "Anksiyete",
+          "Depressiya",
+          "Travma",
+          "Münasibət problemləri",
+          "Kədər və itki",
         ].map((s) => (
           <label key={s}>
             <input
@@ -44,7 +44,7 @@ export default function Filters({ filters, setFilters }) {
       </div>
 
       <div className="section">
-        <h4>Years of Experience</h4>
+        <h4>Təcrübə illəri</h4>
         {["1-5", "5-10", "10+"].map((y) => (
           <label key={y}>
             <input
@@ -52,7 +52,7 @@ export default function Filters({ filters, setFilters }) {
               checked={filters.years.includes(y)}
               onChange={() => toggle("years", y)}
             />
-            {y} Years
+            {y} il
           </label>
         ))}
       </div>

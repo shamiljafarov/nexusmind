@@ -67,3 +67,31 @@
     line-height: 1.5;
   }
 }
+
+
+.obj__img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 972px) {
+  .guiding__cards {
+    flex-direction: column;
+    align-items: center;
+
+    .guiding__card {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .guiding__title {
+    font-size: 30px;
+  }
+
+  .guiding__subtitle {
+    font-size: 15px;
+    max-width: 400px; 
+  } 
+} 

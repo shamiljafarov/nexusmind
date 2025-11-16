@@ -14,50 +14,50 @@ import Footer from '../../Components/Footer/Footer'
 const therapistsData = [
   {
     name: "Dr. Olivia Chen, Psy.D.",
-    specialization: "Depression",
+    specialization: "Depressiya",
     years: "5-10",
     description:
-      "Providing a safe space for healing and growth through compassionate, evidence-based care.",
+      "Şəfqətli və sübutlara əsaslanan terapiya ilə sağalma və inkişaf üçün təhlükəsiz bir məkan təmin edir.",
     image: therapist1,
   },
   {
     name: "Dr. Isabella Rossi, LMFT",
-    specialization: "Anxiety",
+    specialization: "Anksiyete",
     years: "10+",
     description:
-      "Helping individuals navigate life's challenges and discover inner resilience.",
+      "İnsanların həyat çətinliklərini aşmasına və daxili dözümlülüyünü kəşf etməsinə kömək edir.",
     image: therapist2,
   },
   {
     name: "Dr. Ava Nguyen, Ph.D.",
-    specialization: "Trauma",
+    specialization: "Travma",
     years: "5-10",
     description:
-      "Specializing in trauma recovery and empowering clients to reclaim their lives.",
+      "Travmadan sağalma üzrə ixtisaslaşır və müştərilərin həyatlarını yenidən nəzarətə götürmələrinə kömək edir.",
     image: therapist3,
   },
   {
     name: "Dr. Marcus Cole, LCSW",
-    specialization: "Depression",
+    specialization: "Depressiya",
     years: "1-5",
     description:
-      "A collaborative approach to therapy, focusing on your strengths and goals.",
+      "Güclü tərəflərinizə və məqsədlərinizə fokuslanan əməkdaşlığa əsaslanan terapiya yanaşması.",
     image: therapist4,
   },
   {
     name: "Dr. Leo Kim, Psy.D.",
-    specialization: "Relationship Issues",
+    specialization: "Münasibət problemləri",
     years: "5-10",
     description:
-      "Fostering healthier connections and communication skills for individuals and couples.",
+      "Fərdlər və cütlüklər üçün daha sağlam əlaqə və ünsiyyət bacarıqlarını inkişaf etdirməyə kömək edir.",
     image: therapist1,
   },
   {
     name: "Dr. Samuel Jones, Ph.D.",
-    specialization: "Anxiety",
+    specialization: "Anksiyete",
     years: "10+",
     description:
-      "Guiding you towards a calmer mind and a more fulfilling, present life.",
+      "Daha sakit bir zihin və daha dolğun, anı yaşayan bir həyat üçün sizi doğru istiqamətə yönəldir.",
     image: therapist2,
   },
 ];
@@ -85,42 +85,43 @@ export default function TherapistsPage() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <Container>
-          <div className="therapists-page">
-      <Filters filters={filters} setFilters={setFilters} />
+        <div className="therapists-page">
+          <Filters filters={filters} setFilters={setFilters} />
 
-      <div className="content">
-        <div className="header">
-          <h1>Meet Our Therapists</h1>
-          <p>Connect with professionals who can support your well-being.</p>
+          <div className="content">
+            <div className="header">
+              <h1>Psixoloqlarımızla tanış olun</h1>
+              <p>Rifahınızı dəstəkləyə biləcək mütəxəssislərlə əlaqə qurun.</p>
 
-          <input
-            className="search"
-            placeholder="Search by name..."
-            onChange={(e) =>
-              setFilters({ ...filters, search: e.target.value })
-            }
-          />
+              <input
+                className="search"
+                placeholder="Ada görə axtar..."
+                onChange={(e) =>
+                  setFilters({ ...filters, search: e.target.value })
+                }
+              />
+
+            </div>
+
+            <div className="grid">
+              {filteredList.map((t) => (
+                <TherapistCard key={t.name} therapist={t} />
+              ))}
+            </div>
+
+            <div className="pagination">
+              <span className="active">1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>...</span>
+              <span>8</span>
+            </div>
+          </div>
         </div>
-
-        <div className="grid">
-          {filteredList.map((t) => (
-            <TherapistCard key={t.name} therapist={t} />
-          ))}
-        </div>
-
-        <div className="pagination">
-          <span className="active">1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>...</span>
-          <span>8</span>
-        </div>
-      </div>
-    </div>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }
