@@ -28,9 +28,9 @@ function Header() {
           {/* Navigation */}
           <nav className={menuOpen ? "active" : ""}>
             <ul>
-              <li><a href="#home">Ana səhifə</a></li>
+              <li><Link to='/'>Ana səhifə</Link></li>
               <li><Link to='/about'>Haqqımızda</Link></li>
-              <li><a href="#psychologists">Psixoloqlar</a></li>
+              <li><Link to='/psychologists'>Psixoloqlar</Link></li>
               <li><a href="#services">Xidmətlər</a></li>
               <li><a href="#faq">Əlaqə</a></li>
               <li><a href="#login">Daxil ol</a></li>
