@@ -31,9 +31,9 @@ function Header() {
               <li><Link to='/'>Ana səhifə</Link></li>
               <li><Link to='/about'>Haqqımızda</Link></li>
               <li><Link to='/psychologists'>Psixoloqlar</Link></li>
-              <li><a href="#services">Xidmətlər</a></li>
+              <li><Link to='/services'>Xidmətlər</Link></li>
               <li><Link to='/contact'>Əlaqə</Link></li>
-              <li><a href="#login">Daxil ol</a></li>
+              <li><Link to='/login'>Daxil ol</Link></li>
             </ul>
           </nav>
 
