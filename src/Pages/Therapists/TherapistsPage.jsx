@@ -6,6 +6,9 @@ import therapist1 from '../../assets/images/pschologist-1.png'
 import therapist2 from '../../assets/images/pschologist-2.png'
 import therapist3 from '../../assets/images/pschologist-3.png'
 import therapist4 from '../../assets/images/pschologist-4.png'
+import Header from '../../Components/Header/Header'
+import Container from "../../Components/Container/Container";
+import Footer from '../../Components/Footer/Footer'
 
 
 const therapistsData = [
@@ -81,7 +84,10 @@ export default function TherapistsPage() {
   });
 
   return (
-    <div className="therapists-page">
+    <>
+      <Header/>
+      <Container>
+          <div className="therapists-page">
       <Filters filters={filters} setFilters={setFilters} />
 
       <div className="content">
@@ -113,5 +119,8 @@ export default function TherapistsPage() {
         </div>
       </div>
     </div>
+      </Container>
+      <Footer/>
+    </>
   );
 }
