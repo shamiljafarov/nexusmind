@@ -4,30 +4,25 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 
 const faqData = [
   {
-    question: "What is online therapy and how does it work?",
-    answer:
-      "Online therapy allows you to talk to a licensed therapist using video, audio, or chat-based sessions through our secure platform."
+    "question": "Onlayn terapiya nədir və necə işləyir?",
+    "answer": "Onlayn terapiya sizə lisenziyalı terapevtlə təhlükəsiz platformamız vasitəsilə video, audio və ya çat seansları vasitəsilə danışmağa imkan verir."
   },
   {
-    question: "Is online therapy as effective as in-person therapy?",
-    answer:
-      "Yes, numerous studies show that online therapy can be just as effective as traditional in-person sessions."
+    "question": "Onlayn terapiya ənənəvi canlı terapiya qədər təsirlidirmi?",
+    "answer": "Bəli, çoxsaylı araşdırmalar göstərir ki, onlayn terapiya ənənəvi terapiya qədər təsirli ola bilər."
   },
   {
-    question: "How much does a session cost?",
-    answer:
-      "Session costs vary depending on the therapist and type of service. You can view details on the pricing page."
+    "question": "Bir seansın qiyməti nə qədərdir?",
+    "answer": "Seansın qiyməti terapevtə və xidmət növünə görə dəyişir. Ətraflı məlumatı qiymət səhifəsindən görə bilərsiniz."
   },
   {
-    question: "Is my information kept confidential?",
-    answer:
-      "Absolutely. All communication is encrypted and adheres to strict confidentiality policies."
+    "question": "Məlumatlarım gizli saxlanılırmı?",
+    "answer": "Əlbəttə. Bütün yazışmalar şifrələnir və ciddi məxfilik qaydalarına uyğun şəkildə qorunur."
   },
   {
-    question: "How do I get started?",
-    answer:
-      "Simply create an account, choose a therapist, and schedule your first session."
-  },
+    "question": "Necə başlamaq olar?",
+    "answer": "Sadəcə hesab yaradın, terapevt seçin və ilk seansınızı planlaşdırın."
+  }
 ];
 
 export default function FAQ() {
@@ -40,9 +35,9 @@ export default function FAQ() {
   return (
     <section className="faqSection">
       <div className="header">
-            <p className="subtitle">Tez-tez verilən</p>
-            <p>suallar</p>
-        </div>
+        <p className="subtitle">Tez-tez verilən</p>
+        <p>suallar</p>
+      </div>
 
       <div className="faqWrapper">
         {faqData.map((item, index) => (
