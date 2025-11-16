@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Login.scss"; 
+import "./Login.scss";
 import Container from "../../Components/Container/Container";
 import Logo from '../../assets/images/logo.png'
-import LogoAnim from '../../Components/LogoAnimation/HeartAnimation'
+import Header from '../../Components/Header/Header'
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -92,151 +92,151 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <div className="login-page">
+    <>
+    <Header/>
+    <section className="login__section">
+      <Container>
+        <div className="login-page">
 
-        {/* LEFT */}
+          <img src={Logo} alt="login left img" />
 
-        {/* <div className="left"> 
-          <img src={Logo} alt="" />  
-        </div> */}
-        <LogoAnim/>
+          {/* RIGHT */}
+          <div className="right">
+            <div className="card">
 
-        {/* RIGHT */}
-        <div className="right">
-          <div className="card">
+              {/* Tabs */}
+              <div className="tabs">
+                <button
+                  className={!isLogin ? "active" : ""}
+                  onClick={() => setIsLogin(false)}
+                >
+                  Qeydiyyat
+                </button>
 
-            {/* Tabs */}
-            <div className="tabs">
-              <button
-                className={!isLogin ? "active" : ""}
-                onClick={() => setIsLogin(false)}
-              >
-                Qeydiyyat
-              </button>
+                <button
+                  className={isLogin ? "active" : ""}
+                  onClick={() => setIsLogin(true)}
+                >
+                  Daxil ol
+                </button>
+              </div>
 
-              <button
-                className={isLogin ? "active" : ""}
-                onClick={() => setIsLogin(true)}
-              >
-                Daxil ol
-              </button>
+              <h2 className="welcome">
+                {isLogin ? "Xoş gəldiniz" : "Hesab yaradın"}
+              </h2>
+              <p className="small">
+                {isLogin
+                  ? "Davam etmək üçün daxil olun."
+                  : "Zəhmət olmasa formu doldurun."}
+              </p>
+
+              {/* FORM */}
+              <form className="form" onSubmit={handleSubmit}>
+
+                {/* SIGN UP FIELDS */}
+                {!isLogin && (
+                  <>
+                    <label>Ad</label>
+                    <input
+                      name="firstName"
+                      type="text"
+                      placeholder="Adınızı daxil edin"
+                      onChange={handleChange}
+                    />
+                    {errors.firstName && <span className="error">{errors.firstName}</span>}
+
+                    <label>Soyad</label>
+                    <input
+                      name="lastName"
+                      type="text"
+                      placeholder="Soyadınızı daxil edin"
+                      onChange={handleChange}
+                    />
+                    {errors.lastName && <span className="error">{errors.lastName}</span>}
+
+                    <label>Yaş</label>
+                    <input
+                      name="age"
+                      type="number"
+                      placeholder="Yaşınız"
+                      onChange={handleChange}
+                    />
+                    {errors.age && <span className="error">{errors.age}</span>}
+
+                    <label>Telefon</label>
+                    <input
+                      name="phone"
+                      type="text"
+                      value={formData.phone}
+                      onChange={handlePhoneChange}
+                      placeholder="+994 XX XXX XX XX"
+                    />
+                    {errors.phone && <span className="error">{errors.phone}</span>}
+                  </>
+                )}
+
+                {/* EMAIL */}
+                <label>Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email daxil edin"
+                  onChange={handleChange}
+                />
+                {errors.email && <span className="error">{errors.email}</span>}
+
+                {/* PASSWORD */}
+                <label>Şifrə</label>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Şifrənizi daxil edin"
+                  onChange={handleChange}
+                />
+                {errors.password && <span className="error">{errors.password}</span>}
+
+                {/* CONFIRM PASSWORD */}
+                {!isLogin && (
+                  <>
+                    <label>Şifrə təkrarı</label>
+                    <input
+                      name="confirmPassword"
+                      type="password"
+                      placeholder="Şifrəni təkrar daxil edin"
+                      onChange={handleChange}
+                    />
+                    {errors.confirmPassword && (
+                      <span className="error">{errors.confirmPassword}</span>
+                    )}
+                  </>
+                )}
+
+                <button className="login-btn" type="submit">
+                  {isLogin ? "Daxil ol" : "Qeydiyyat"}
+                </button>
+              </form>
+
+              <p className="bottom">
+                {isLogin ? (
+                  <>
+                    Hesabınız yoxdur?{" "}
+                    <a onClick={() => setIsLogin(false)}>Qeydiyyat</a>
+                  </>
+                ) : (
+                  <>
+                    Hesabınız var?{" "}
+                    <a onClick={() => setIsLogin(true)}>Daxil ol</a>
+                  </>
+                )}
+              </p>
+
             </div>
-
-            <h2 className="welcome">
-              {isLogin ? "Xoş gəldiniz" : "Hesab yaradın"}
-            </h2>
-            <p className="small">
-              {isLogin
-                ? "Davam etmək üçün daxil olun."
-                : "Zəhmət olmasa formu doldurun."}
-            </p>
-
-            {/* FORM */}
-            <form className="form" onSubmit={handleSubmit}>
-
-              {/* SIGN UP FIELDS */}
-              {!isLogin && (
-                <>
-                  <label>Ad</label>
-                  <input
-                    name="firstName"
-                    type="text"
-                    placeholder="Adınızı daxil edin"
-                    onChange={handleChange}
-                  />
-                  {errors.firstName && <span className="error">{errors.firstName}</span>}
-
-                  <label>Soyad</label>
-                  <input
-                    name="lastName"
-                    type="text"
-                    placeholder="Soyadınızı daxil edin"
-                    onChange={handleChange}
-                  />
-                  {errors.lastName && <span className="error">{errors.lastName}</span>}
-
-                  <label>Yaş</label>
-                  <input
-                    name="age"
-                    type="number"
-                    placeholder="Yaşınız"
-                    onChange={handleChange}
-                  />
-                  {errors.age && <span className="error">{errors.age}</span>}
-
-                  <label>Telefon</label>
-                  <input
-                    name="phone"
-                    type="text"
-                    value={formData.phone}
-                    onChange={handlePhoneChange}
-                    placeholder="+994 XX XXX XX XX"
-                  />
-                  {errors.phone && <span className="error">{errors.phone}</span>}
-                </>
-              )}
-
-              {/* EMAIL */}
-              <label>Email</label>
-              <input
-                name="email"
-                type="email"
-                placeholder="Email daxil edin"
-                onChange={handleChange}
-              />
-              {errors.email && <span className="error">{errors.email}</span>}
-
-              {/* PASSWORD */}
-              <label>Şifrə</label>
-              <input
-                name="password"
-                type="password"
-                placeholder="Şifrənizi daxil edin"
-                onChange={handleChange}
-              />
-              {errors.password && <span className="error">{errors.password}</span>}
-
-              {/* CONFIRM PASSWORD */}
-              {!isLogin && (
-                <>
-                  <label>Şifrə təkrarı</label>
-                  <input
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="Şifrəni təkrar daxil edin"
-                    onChange={handleChange}
-                  />
-                  {errors.confirmPassword && (
-                    <span className="error">{errors.confirmPassword}</span>
-                  )}
-                </>
-              )}
-
-              <button className="login-btn" type="submit">
-                {isLogin ? "Daxil ol" : "Qeydiyyat"}
-              </button>
-            </form>
-
-            <p className="bottom">
-              {isLogin ? (
-                <>
-                  Hesabınız yoxdur?{" "}
-                  <a onClick={() => setIsLogin(false)}>Qeydiyyat</a>
-                </>
-              ) : (
-                <>
-                  Hesabınız var?{" "}
-                  <a onClick={() => setIsLogin(true)}>Daxil ol</a>
-                </>
-              )}
-            </p>
-
           </div>
-        </div>
 
-      </div>
-    </Container>
+        </div>
+      </Container>
+    </section>
+    </>
   );
 };
 
