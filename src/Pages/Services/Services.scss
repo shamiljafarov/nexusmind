@@ -1,0 +1,27 @@
+.pathways {
+    margin: 120px auto 4rem;
+  text-align: center;
+  padding: 80px 20px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+}
