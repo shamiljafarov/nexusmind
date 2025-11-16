@@ -32,7 +32,7 @@ function Header() {
               <li><Link to='/about'>Haqqımızda</Link></li>
               <li><Link to='/psychologists'>Psixoloqlar</Link></li>
               <li><a href="#services">Xidmətlər</a></li>
-              <li><a href="#faq">Əlaqə</a></li>
+              <li><Link to='/contact'>Əlaqə</Link></li>
               <li><a href="#login">Daxil ol</a></li>
             </ul>
           </nav>
