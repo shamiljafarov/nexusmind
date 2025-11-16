@@ -1,0 +1,35 @@
+.filters {
+  width: 240px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  height: fit-content;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .clear {
+      border: none;
+      background: none;
+      color: #0077ff;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+
+  h4 {
+    margin: 14px 0 8px;
+    color: #444;
+  }
+
+  label {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+}
