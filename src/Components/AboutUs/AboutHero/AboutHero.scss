@@ -1,0 +1,36 @@
+.about-hero {
+    background: linear-gradient(180deg, #eaf3ee 0%, #d8e8f7 100%);
+  border-radius: 16px;
+  padding: 5rem 4rem;
+  max-width: 1200px;
+  margin: 120px auto 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  
+
+  &__content {
+    max-width: 700px;
+
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0b1525;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+
+      span {
+        color: #1e88ff;
+      }
+    }
+
+    p {
+      color: #444c56;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import "./_Header.scss";
 import Container from "../Container/Container";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,9 +28,9 @@ function Header() {
           {/* Navigation */}
           <nav className={menuOpen ? "active" : ""}>
             <ul>
-              <li><a href="#home">Ana səhifə</a></li>
-              <li><a href="#about">Haqqımızda</a></li>
-              <li><a href="#psychologists">Psixoloqlar</a></li>
+              <li><Link to='/'>Ana səhifə</Link></li>
+              <li><Link to='/about'>Haqqımızda</Link></li>
+              <li><Link to='/psychologists'>Psixoloqlar</Link></li>
               <li><a href="#services">Xidmətlər</a></li>
               <li><a href="#faq">Əlaqə</a></li>
               <li><a href="#login">Daxil ol</a></li>
@@ -38,8 +39,7 @@ function Header() {
 
           {/* Right side button */}
           <div className="hero__buttons">
-            <button className="btn primary">Qeydiyyatdan keç</button>
-            <button className="btn secondary">Daxil ol</button>
+            <Link to="/login" className="btn secondary">Daxil ol</Link>
           </div>
         </div>
       </Container>
