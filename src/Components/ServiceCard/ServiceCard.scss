@@ -1,50 +1,93 @@
 .service-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 28px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 34px 28px;
   width: 100%;
   max-width: 360px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: 0.2s ease;
-  cursor: pointer;
 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* hover эффект */
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+
+    .service-card__link {
+      gap: 8px;
+      transform: translateX(2px);
+    }
   }
 
   &__icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    margin-bottom: 18px;
-    opacity: 0.9;
+
+    font-size: 26px;
+    margin-bottom: 20px;
+    opacity: 0.95;
   }
 
   &__title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
   }
 
   &__desc {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 22px;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.55;
   }
 
   &__link {
-    font-size: 14px;
-    font-weight: 500;
-    color: #3ba56a;
-    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 
-    &:hover {
-      text-decoration: underline;
+    color: #2d9e6f;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &::after {
+      content: "→";
+      transition: transform 0.25s ease;
+    }
+
+    &:hover::after {
+      transform: translateX(4px);
+    }
+  }
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+  .service-card {
+    padding: 26px 22px;
+
+    &__icon {
+      width: 52px;
+      height: 52px;
+      font-size: 22px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__desc {
+      font-size: 14px;
     }
   }
 }

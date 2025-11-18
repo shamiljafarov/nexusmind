@@ -1,21 +1,26 @@
 .contact-page {
-  padding: 40px 70px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto 4rem;
+  padding: 40px 24px;
   background: #f7f8fa;
   font-family: "Inter", sans-serif;
-    margin: 120px auto 4rem;
+  box-sizing: border-box;
 
-
+  /* HEADER ------------------------------------------------ */
   .header-section {
     max-width: 700px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
+    text-align: center;
 
     h1 {
       font-size: 34px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
     p {
+      font-size: 16px;
       color: #555;
       line-height: 1.6;
     }
@@ -31,12 +36,20 @@
     .card {
       background: #fff;
       padding: 22px;
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1px solid #e8e8e8;
+      text-align: center;
+      transition: .25s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,0,0,.07);
+      }
 
       .icon {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 30px;
+        margin-bottom: 10px;
       }
 
       .label {
@@ -45,31 +58,37 @@
       }
 
       .value {
-        margin-top: 5px;
+        margin-top: 6px;
         font-size: 15px;
-        line-height: 1.4;
       }
     }
   }
 
   /* FORM -------------------------------------------------- */
   .form-container {
-    background: #fff;
-    padding: 25px 30px 35px;
-    border-radius: 14px;
-    border: 1px solid #e5e5e5;
+    width: 100%;
     max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 28px 35px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 16px rgba(0,0,0,.04);
 
     h2 {
-      font-size: 20px;
-      font-weight: 600;
+      text-align: center;
+      font-size: 22px;
       margin-bottom: 25px;
+      font-weight: 600;
     }
 
     form {
+      width: 100%;
+
       .row {
         display: flex;
         gap: 20px;
+        width: 100%;
       }
 
       .field {
@@ -79,26 +98,31 @@
         label {
           display: block;
           margin-bottom: 6px;
-          font-size: 14px;
           color: #444;
+          font-size: 14px;
+          font-weight: 500;
         }
 
         input,
         textarea {
           width: 100%;
-          padding: 12px;
+          padding: 12px 14px;
           border-radius: 10px;
           border: 1px solid #dcdcdc;
+          background: #fafafa;
           font-size: 14px;
           outline: none;
+          transition: .25s;
 
           &:focus {
-            border-color: #8bbdff;
+            background: #fff;
+            border-color: #3b8eff;
+            box-shadow: 0 0 0 3px rgba(59,142,255,0.15);
           }
         }
 
         textarea {
-          height: 130px;
+          height: 140px;
           resize: none;
         }
       }
@@ -106,23 +130,28 @@
       .privacy-note {
         font-size: 13px;
         color: #666;
-        margin-top: -5px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 
+      /* Кнопка БЕЗ float — flex решает всё */
       .submit-btn {
+        margin-left: auto;
         background: #3b8eff;
-        color: white;
-        padding: 12px 25px;
+        color: #fff;
+        padding: 13px 28px;
         border: none;
         border-radius: 10px;
         cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: .25s;
         font-size: 15px;
-        float: right;
-        transition: 0.2s;
 
         &:hover {
           background: #1e74e6;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(30,116,230,.3);
         }
       }
     }
@@ -130,22 +159,22 @@
 
   /* DISCLAIMER -------------------------------------------- */
   .disclaimer {
-    margin-top: 30px;
-    background: #ffecec;
-    padding: 18px 22px;
-    border-radius: 10px;
-    border-left: 4px solid #ff4a4a;
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    align-items: flex-start;
     max-width: 900px;
+    margin: 30px auto;
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: #ffecec;
+    border-left: 4px solid #ff4a4a;
 
     .icon {
       font-size: 22px;
-      margin-top: 3px;
     }
 
     strong {
-      color: #b70000;
+      color: #c40000;
     }
   }
 
@@ -156,19 +185,81 @@
     border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    p {
+      font-size: 14px;
+      color: #666;
+    }
 
     .links {
       display: flex;
-      gap: 20px;
+      gap: 18px;
 
       a {
-        color: #555;
         text-decoration: none;
+        font-size: 14px;
+        color: #555;
+        transition: .2s;
 
         &:hover {
           text-decoration: underline;
+          color: #3b8eff;
         }
       }
+    }
+  }
+
+  /* RESPONSIVE ------------------------------------------- */
+
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .info-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Phones */
+  @media (max-width: 700px) {
+    margin-top: 100px;
+
+    .info-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .form-container {
+      padding: 28px 18px;
+    }
+
+    .form-container form .row {
+      flex-direction: column;
+    }
+
+    .form-container form .submit-btn {
+      width: 100%;
+      margin: 10px 0 0 0;
+    }
+
+    footer {
+      text-align: center;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  /* SUPER SMALL — 320px */
+  @media (max-width: 360px) {
+    padding: 20px 12px;
+
+    .form-container {
+      padding: 20px 14px;
+    }
+
+    .form-container form .submit-btn {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px 0;
     }
   }
 }
