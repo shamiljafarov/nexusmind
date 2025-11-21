@@ -14,7 +14,7 @@ export default function ClientDashboardPage() {
                 <p>Bu günki fəaliyyətinə nəzər sal. Burada olduğuna görə məmnunuq.</p>
             </div>
             <div className="dashboard-components">
-                <div className="left-components">
+                <div className="left-components"> 
                     <UpcomingAppointments/>
                     <div className="comp-bottom"><Progress/></div>
                     <div className="comp-bottom"><RecentMessages/></div>
