@@ -1,49 +1,50 @@
-import Container from "../Container/Container";
-import './ClientNavbar.scss'
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import profil from '../../assets/images/profil-picture.jpg'
 import logo from '../../assets/images/logo.png'
+import './ClientNavbar.scss'
 
-export  default function ClientNavbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    return(
-        <Container> 
-        <div className="header__wrapper">
-          {/* Logo */}
-          <a href="#" className="header__logo">
-            <img src={logo} alt="Nexusmind Logo" />
-          </a>
+export default function ClientNavbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-          {/* Burger button */}
-          <div
-            className={`burger ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+  return (
+    <>
+      <aside className={`client-sidebar ${menuOpen ? "open" : ""}`}>
+        
+        {/* Logo */}
+        <div className="csb-logo">
+          <img src={logo} alt="logo" />
+          <h2>NexusMind</h2>
+        </div>
 
-          {/* Navigation */}
-          <nav className={menuOpen ? "active" : ""}>
-            <ul>
-              <li><Link to='client-dashboard'>Dashboard</Link></li>
-              <li><Link to='/'>Xidmətlər</Link></li>
-              <li><Link to='/'>Resurslar</Link></li>
-              <li><Link to='/'>Mesajlar</Link></li>
-              <li><Link to='/'>Görüş bron et</Link></li>
-            </ul>
-          </nav>
+        {/* Menu */}
+        <nav className="csb-menu">
+          <NavLink to="/client-dashboard">Dashboard</NavLink>
+          <NavLink to="/">Sessions</NavLink>
+          <NavLink to="/">Messages</NavLink>
+          <NavLink to="/">Resources</NavLink>
+          <NavLink to="/">Profile</NavLink>
+        </nav>
 
-          {/* Right side button */}
-          <div className="hero__buttons">
-            <Link to="/login" className="btn secondary">Görüş bron et</Link>
-            <div className="profil">
-                <Link to='/'><img src={profil}/></Link>
-            </div>
+        {/* Book Button */}
+        <button className="csb-book-btn">Book a Session</button>
+
+        {/* Profile Box */}
+        <div className="csb-profile">
+          <img src={profil} alt="profil" />
+          <div>
+            <p className="name">Maria Sanchez</p>
+            <p className="email">maria.sanchez@email.com</p>
           </div>
         </div>
-      </Container>
-    )
+      </aside>
+
+      {/* Mobile Burger */}
+      <div className="client-burger" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </>
+  );
 }
