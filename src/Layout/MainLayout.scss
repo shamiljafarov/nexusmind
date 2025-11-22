@@ -2,3 +2,15 @@ main {
     margin-top: 150px;
     margin-left: 120px;
 }
+
+@media (max-width: 900px) {
+    main{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    main{
+        margin-left: 0;
+    }
+}
