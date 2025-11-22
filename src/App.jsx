@@ -8,6 +8,7 @@ import ContactPage from './Pages/ContactPage/ContactPage'
 import Services from './Pages/Services/Services'
 import MainLayout from './Layout/MainLayout'
 import ClientDashboardPage from './Pages/ClientDashboardPage/ClientDashboardPage'
+import ClientTherapists from './Pages/ClientTherapistsPage/ClientTherapistsPage'
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
 
         {/* login sonrasi sehifeler */}
 
-        <Route path='/main' element={<MainLayout/>}>
-          <Route path='client-dashboard' element={<ClientDashboardPage/>}/>
+        <Route path='/client' element={<MainLayout/>}>
+          <Route path='dashboard' element={<ClientDashboardPage/>}/>
+          <Route path='therapists' element={<ClientTherapists/>}/>
         </Route>
 
       </Routes>

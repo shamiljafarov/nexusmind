@@ -19,8 +19,8 @@ export default function ClientNavbar() {
 
         {/* Menu */}
         <nav className="csb-menu">
-          <NavLink to="/main/client-dashboard">Dashboard</NavLink>
-          <NavLink to="/">Psixoloqlar</NavLink>
+          <NavLink to="/client/dashboard">Dashboard</NavLink>
+          <NavLink to="/client/therapists">Psixoloqlar</NavLink>
           <NavLink to="/">Mesajlar</NavLink>
           <NavLink to="/">Resurslar</NavLink>
           <NavLink to="/">Əlaqə</NavLink>
