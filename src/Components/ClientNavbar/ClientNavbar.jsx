@@ -19,15 +19,15 @@ export default function ClientNavbar() {
 
         {/* Menu */}
         <nav className="csb-menu">
-          <NavLink to="/client-dashboard">Dashboard</NavLink>
-          <NavLink to="/">Sessions</NavLink>
-          <NavLink to="/">Messages</NavLink>
-          <NavLink to="/">Resources</NavLink>
-          <NavLink to="/">Profile</NavLink>
+          <NavLink to="/main/client-dashboard">Dashboard</NavLink>
+          <NavLink to="/">Psixoloqlar</NavLink>
+          <NavLink to="/">Mesajlar</NavLink>
+          <NavLink to="/">Resurslar</NavLink>
+          <NavLink to="/">Əlaqə</NavLink>
         </nav>
 
         {/* Book Button */}
-        <button className="csb-book-btn">Book a Session</button>
+        <button className="csb-book-btn">Görüş bron et</button>
 
         {/* Profile Box */}
         <div className="csb-profile">
